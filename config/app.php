@@ -217,6 +217,7 @@ return [
      * Drivers include Mysql Postgres Sqlite Sqlserver
      * See vendor\cakephp\cakephp\src\Database\Driver for complete list
      */
+    //alterado
     'Datasources' => [
         'default' => [
             'className' => 'Cake\Database\Connection',
