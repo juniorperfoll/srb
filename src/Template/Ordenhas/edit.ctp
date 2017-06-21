@@ -5,25 +5,25 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+        <li class="heading">Ações</li>
         <li><?= $this->Form->postLink(
-                __('Delete'),
+                __('Deletar'),
                 ['action' => 'delete', $ordenha->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $ordenha->id)]
+                ['confirm' => __('Você confirma a exclusão de # {0}?', $ordenha->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('List Ordenhas'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Listar Ordenhas'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="ordenhas form large-9 medium-8 columns content">
     <?= $this->Form->create($ordenha) ?>
     <fieldset>
-        <legend><?= __('Edit Ordenha') ?></legend>
+        <legend><?= __('Editar Ordenha') ?></legend>
         <?php
             echo $this->Form->control('data');
             echo $this->Form->control('descricao');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Enviar')) ?>
     <?= $this->Form->end() ?>
 </div>

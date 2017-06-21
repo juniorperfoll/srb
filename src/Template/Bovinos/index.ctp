@@ -5,8 +5,8 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Bovino'), ['action' => 'add']) ?></li>
+        <li class="heading"><?= __('Ações') ?></li>
+        <li><?= $this->Html->link(__('Novo Bovino'), ['action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="bovinos index large-9 medium-8 columns content">
@@ -16,8 +16,8 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('nome') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('raca') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('raça') ?></th>
+                <th scope="col" class="actions"><?= __('Ações') ?></th>
             </tr>
         </thead>
         <tbody>
@@ -27,9 +27,9 @@
                 <td><?= h($bovino->nome) ?></td>
                 <td><?= h($bovino->raca) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $bovino->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $bovino->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $bovino->id], ['confirm' => __('Are you sure you want to delete # {0}?', $bovino->id)]) ?>
+                    <?= $this->Html->link(__('Visual.'), ['action' => 'view', $bovino->id]) ?>
+                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $bovino->id]) ?>
+                    <?= $this->Form->postLink(__('Excluir'), ['action' => 'delete', $bovino->id], ['confirm' => __('Vai mesmo excluir -> {0}?', $bovino->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
@@ -37,12 +37,12 @@
     </table>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->first('<< ' . __('prim.')) ?>
+            <?= $this->Paginator->prev('< ' . __('ant.')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?= $this->Paginator->next(__('prox.') . ' >') ?>
+            <?= $this->Paginator->last(__('ant.') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+        <p><?= $this->Paginator->counter(['format' => __('Pág. {{page}} de {{pages}}, visual. {{current}} registros(s) de {{count}} total')]) ?></p>
     </div>
 </div>
