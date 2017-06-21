@@ -5,14 +5,14 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Prenhez'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Bovinos'), ['controller' => 'Bovinos', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Bovino'), ['controller' => 'Bovinos', 'action' => 'add']) ?></li>
+        <li class="heading">Ações</li>
+        <li><?= $this->Html->link(__('Adicionar Prenhez'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Listar Prenhez'), ['controller' => 'Bovinos', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Adicionar Bovino'), ['controller' => 'Bovinos', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="prenhez index large-9 medium-8 columns content">
-    <h3><?= __('Prenhez') ?></h3>
+    <h3>Prenhez</h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -37,9 +37,9 @@
                 <td><?= h($prenhez->created) ?></td>
                 <td><?= h($prenhez->modified) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $prenhez->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $prenhez->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $prenhez->id], ['confirm' => __('Are you sure you want to delete # {0}?', $prenhez->id)]) ?>
+                    <?= $this->Html->link(__('Mostrar'), ['action' => 'view', $prenhez->id]) ?>
+                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $prenhez->id]) ?>
+                    <?= $this->Form->postLink(__('Excluir'), ['action' => 'delete', $prenhez->id], ['confirm' => __('Are you sure you want to delete # {0}?', $prenhez->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
