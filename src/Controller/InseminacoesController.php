@@ -21,7 +21,7 @@ class InseminacoesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Bovinos', 'Inserminadors']
+            'contain' => ['Bovinos', 'Inseminadors']
         ];
         $inseminacoes = $this->paginate($this->Inseminacoes);
 
@@ -65,7 +65,7 @@ class InseminacoesController extends AppController
         }
         $bovinos = $this->Inseminacoes->Bovinos->find('list', ['limit' => 200]);
         $inserminadors = $this->Inseminacoes->Inserminadors->find('list', ['limit' => 200]);
-        $this->set(compact('inseminaco', 'bovinos', 'inserminadors'));
+        $this->set(compact('inseminaco', 'bovinos', 'inseminadores'));
         $this->set('_serialize', ['inseminaco']);
     }
 

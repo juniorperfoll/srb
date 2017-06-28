@@ -45,8 +45,8 @@ class InseminacoesTable extends Table
             'foreignKey' => 'bovino_id',
             'joinType' => 'INNER'
         ]);
-        $this->belongsTo('Inserminadors', [
-            'foreignKey' => 'inserminador_id',
+        $this->belongsTo('Inseminadors', [
+            'foreignKey' => 'inseminador_id',
             'joinType' => 'INNER'
         ]);
     }
@@ -85,7 +85,7 @@ class InseminacoesTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['bovino_id'], 'Bovinos'));
-        $rules->add($rules->existsIn(['inserminador_id'], 'Inserminadors'));
+        $rules->add($rules->existsIn(['inseminador_id'], 'Inseminadores'));
 
         return $rules;
     }

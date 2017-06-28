@@ -30,7 +30,7 @@ class InseminadoresTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('inseminadores');
+        $this->setTable('inseminadors');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
     }

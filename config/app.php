@@ -259,23 +259,23 @@ return [
         /**
          * The test connection is used during the test suite.
          */
-        'test' => [
-            'className' => 'Cake\Database\Connection',
-            'driver' => 'Cake\Database\Driver\Mysql',
-            'persistent' => false,
-            'host' => 'sistemasrb.mysql.dbaas.com.br',
-            //'port' => 'non_standard_port_number',
-            'username' => 'sistemasrb',
-            'password' => 'qualidade2017',
-            'database' => 'sistemasrb',
-            'encoding' => 'utf8',
-            'timezone' => 'UTC',
-            'cacheMetadata' => true,
-            'quoteIdentifiers' => false,
-            'log' => false,
-            //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
-            'url' => env('DATABASE_TEST_URL', null),
-        ],
+//        'test' => [
+//            'className' => 'Cake\Database\Connection',
+//            'driver' => 'Cake\Database\Driver\Mysql',
+//            'persistent' => false,
+//            'host' => 'sistemasrb.mysql.dbaas.com.br',
+//            //'port' => 'non_standard_port_number',
+//            'username' => 'sistemasrb',
+//            'password' => 'qualidade2017',
+//            'database' => 'sistemasrb',
+//            'encoding' => 'utf8',
+//            'timezone' => 'UTC',
+//            'cacheMetadata' => true,
+//            'quoteIdentifiers' => false,
+//            'log' => false,
+//            //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
+//            'url' => env('DATABASE_TEST_URL', null),
+//        ],
     ],
 
     /**

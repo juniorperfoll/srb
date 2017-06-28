@@ -48,20 +48,18 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
+     public function add()
     {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'add']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__('Unable to add the user.'));
         }
-        $this->set(compact('user'));
-        $this->set('_serialize', ['user']);
+        $this->set('user', $user);
     }
 
     /**
@@ -105,14 +103,6 @@ class UsersController extends AppController
         } else {
             $this->Flash->error(__('The user could not be deleted. Please, try again.'));
         }
-
-        return $this->redirect(['action' => 'index']);
     }
-
-    /**
-    exemplo para testCase
-    **/
-    public function mostraOi() {
-      return 'oi';
-    }
+    
 }
