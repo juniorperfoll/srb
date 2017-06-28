@@ -18,7 +18,7 @@ class InseminacoesControllerTest extends IntegrationTestCase
     public $fixtures = [
         'app.inseminacoes',
         'app.bovinos',
-        'app.inserminadors'
+        'app.inserminadores'
     ];
 
     /**

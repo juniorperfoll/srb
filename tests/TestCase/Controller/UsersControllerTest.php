@@ -68,4 +68,12 @@ class UsersControllerTest extends IntegrationTestCase
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
+
+    /**
+      testando minha funcao
+    **/
+    public function testMostraOi() {
+      $result = $this->controller->mostraOi();
+      $this->assertContains($result,'oi');
+    }
 }
